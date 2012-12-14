@@ -7,7 +7,7 @@ module BigosModule
     include AbstractController::Helpers
     include AbstractController::Translation
     include AbstractController::AssetPaths
-    include ActionController::UrlWriter
+    #include ActionController::UrlWriter
 
     self.view_paths = "app/views"
 
