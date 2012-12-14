@@ -1,14 +1,6 @@
 module BigosModule
 
-  class Base < AbstractController::Base
-
-    include AbstractController::Rendering
-    include AbstractController::Layouts
-    include AbstractController::Helpers
-    include AbstractController::Translation
-    include AbstractController::AssetPaths
-    #include ActionController::UrlWriter
-
+  class Base
     self.view_paths = "app/views"
 
     def self.frontend_widget
@@ -18,6 +10,9 @@ module BigosModule
     def self.backend_widget
       raise("not implemented by this module")
     end
+  end
+
+  class AdminController < ActionController::Base
 
   end
 
