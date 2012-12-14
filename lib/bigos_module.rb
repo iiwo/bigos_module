@@ -1,12 +1,12 @@
 module BigosModule
 
-  class Base < ::Rails::Engine
+  class Base
 
-    def frontend_widget
+    def self.frontend_widget
       raise("not implemented by this module")
     end
 
-    def backend_widget
+    def self.backend_widget
       raise("not implemented by this module")
     end
 
