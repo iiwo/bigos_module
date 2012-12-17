@@ -1,5 +1,8 @@
 module BigosModule
 
+  mattr_accessor :authorization_inject_code
+  @@inject_code = nil
+
   class Base
 
     def self.frontend_widget
@@ -12,7 +15,7 @@ module BigosModule
   end
 
   class AdminController < ActionController::Base
-
+    eval(authorization_inject_code) unless authorization_inject_code.blank?
   end
 
 end
